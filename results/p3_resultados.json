@@ -1,0 +1,248 @@
+{
+  "calibracao": {
+    "grade_q_d": [
+      1e-05,
+      3e-05,
+      0.0001,
+      0.0003,
+      0.001,
+      0.003,
+      0.01,
+      0.03
+    ],
+    "rmse": {
+      "com_entradas": [
+        12.87144445451862,
+        12.54249353765027,
+        12.227639727419106,
+        11.907210282623902,
+        11.84023880815901,
+        11.933154114460157,
+        12.36330099221527,
+        13.055803869342775
+      ],
+      "sem_entradas": [
+        26.685975632657,
+        26.33275884618507,
+        24.478263606358603,
+        22.26636426429665,
+        18.905615054835305,
+        16.144410063811975,
+        13.697182784753643,
+        13.474802026003358
+      ]
+    },
+    "q_com": 0.001,
+    "q_sem": 0.03,
+    "rmse_sensor_bruto": 12.277158699187735
+  },
+  "sensor": {
+    "leituras_validas_pct": 99.62797619047619,
+    "minutos_com_artefato": 302,
+    "noites_com_artefato": 8
+  },
+  "kalman_leituras": {
+    "usada": 7986,
+    "rejeitada": 47,
+    "ausente": 30
+  },
+  "rejeitadas_em_artefato": 8,
+  "tempo_filtro_s": 1.1101979259999553,
+  "tempo_por_passo_us": 27.534670783729048,
+  "estimativa": {
+    "Sensor (leitura bruta)": {
+      "rmse": 11.938622298585562,
+      "mard_pct": 7.210319248181662,
+      "atraso_min": 8
+    },
+    "Média móvel (3 leituras)": {
+      "rmse": 12.336963638174106,
+      "mard_pct": 7.255353724656517,
+      "atraso_min": 13
+    },
+    "Kalman sem entradas": {
+      "rmse": 14.123016589319139,
+      "mard_pct": 8.323540163976945,
+      "atraso_min": 4
+    },
+    "Kalman com entradas": {
+      "rmse": 11.665827678179618,
+      "mard_pct": 6.879786348202888,
+      "atraso_min": 1
+    }
+  },
+  "cobertura_2sigma_pct": 79.93302740915293,
+  "sigma_medio": 6.7668621443890276,
+  "eventos_hipo": [
+    [
+      7113,
+      7174
+    ],
+    [
+      9731,
+      9790
+    ],
+    [
+      15788,
+      15851
+    ],
+    [
+      18156,
+      18226
+    ],
+    [
+      18587,
+      18664
+    ],
+    [
+      19708,
+      19826
+    ],
+    [
+      20131,
+      20217
+    ],
+    [
+      26517,
+      26578
+    ],
+    [
+      31620,
+      31698
+    ],
+    [
+      34103,
+      34253
+    ],
+    [
+      38370,
+      38432
+    ]
+  ],
+  "tempo_abaixo_70_pct": 2.177579365079365,
+  "tempo_70_180_pct": 85.9623015873016,
+  "glicose_media": 129.8800043226911,
+  "correcoes_paciente": 11,
+  "alarmes": {
+    "Alarme do sensor (leitura < 70)": {
+      "eventos": 11,
+      "detectados": 11,
+      "sensibilidade": 1.0,
+      "antecedencia_mediana_min": 3.0,
+      "antecedencias": [
+        8,
+        -4,
+        3,
+        6,
+        -13,
+        53,
+        21,
+        7,
+        -10,
+        -7,
+        -20
+      ],
+      "alarmes": 48,
+      "falsos": 26,
+      "falsos_por_dia": 0.9285714285714286,
+      "falsos_em_artefato": 5
+    },
+    "Tendência do sensor (30 min)": {
+      "eventos": 11,
+      "detectados": 11,
+      "sensibilidade": 1.0,
+      "antecedencia_mediana_min": 36.0,
+      "antecedencias": [
+        23,
+        56,
+        3,
+        56,
+        42,
+        58,
+        36,
+        42,
+        25,
+        28,
+        -10
+      ],
+      "alarmes": 266,
+      "falsos": 243,
+      "falsos_por_dia": 8.678571428571429,
+      "falsos_em_artefato": 6
+    },
+    "Kalman sem entradas (30 min)": {
+      "eventos": 11,
+      "detectados": 11,
+      "sensibilidade": 1.0,
+      "antecedencia_mediana_min": 27.0,
+      "antecedencias": [
+        3,
+        11,
+        8,
+        51,
+        27,
+        58,
+        56,
+        37,
+        20,
+        23,
+        60
+      ],
+      "alarmes": 148,
+      "falsos": 124,
+      "falsos_por_dia": 4.428571428571429,
+      "falsos_em_artefato": 8
+    },
+    "Kalman com entradas (30 min)": {
+      "eventos": 11,
+      "detectados": 11,
+      "sensibilidade": 1.0,
+      "antecedencia_mediana_min": 18.0,
+      "antecedencias": [
+        58,
+        1,
+        13,
+        51,
+        32,
+        38,
+        1,
+        42,
+        15,
+        18,
+        5
+      ],
+      "alarmes": 67,
+      "falsos": 47,
+      "falsos_por_dia": 1.6785714285714286,
+      "falsos_em_artefato": 5
+    },
+    "Kalman com entradas, sem rejeição": {
+      "eventos": 11,
+      "detectados": 11,
+      "sensibilidade": 1.0,
+      "antecedencia_mediana_min": 18.0,
+      "antecedencias": [
+        58,
+        1,
+        13,
+        51,
+        32,
+        38,
+        1,
+        42,
+        15,
+        18,
+        5
+      ],
+      "alarmes": 68,
+      "falsos": 48,
+      "falsos_por_dia": 1.7142857142857142,
+      "falsos_em_artefato": 7
+    }
+  },
+  "episodio_figura": {
+    "inicio": 7113,
+    "alerta_kalman": -58,
+    "alarme_sensor": -8
+  }
+}

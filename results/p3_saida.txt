@@ -1,0 +1,17 @@
+Calibração: q_d com entradas = 0.001 | sem entradas = 0.03
+  RMSE com: ['12.9', '12.5', '12.2', '11.9', '11.8', '11.9', '12.4', '13.1']
+  RMSE sem: ['26.7', '26.3', '24.5', '22.3', '18.9', '16.1', '13.7', '13.5']
+Teste (28 dias): glicose média 130 mg/dL, 86% no alvo, 2.2% < 70; 11 hipoglicemias; 11 correções do paciente
+Sensor: {'leituras_validas_pct': 99.62797619047619, 'minutos_com_artefato': 302, 'noites_com_artefato': 8} | Kalman: {'usada': 7986, 'rejeitada': 47, 'ausente': 30} | rejeitadas em artefato: 8
+  Sensor (leitura bruta)       RMSE  11.9  MARD  7.2%  atraso 8 min
+  Média móvel (3 leituras)     RMSE  12.3  MARD  7.3%  atraso 13 min
+  Kalman sem entradas          RMSE  14.1  MARD  8.3%  atraso 4 min
+  Kalman com entradas          RMSE  11.7  MARD  6.9%  atraso 1 min
+  cobertura do intervalo ±2σ: 79.9% (σ médio 6.8)
+  Alarme do sensor (leitura < 70)      detectou 11/11  antecedência mediana 3.0 min  falsos 26 (0.93/dia; 5 em artefato)
+  Tendência do sensor (30 min)         detectou 11/11  antecedência mediana 36.0 min  falsos 243 (8.68/dia; 6 em artefato)
+  Kalman sem entradas (30 min)         detectou 11/11  antecedência mediana 27.0 min  falsos 124 (4.43/dia; 8 em artefato)
+  Kalman com entradas (30 min)         detectou 11/11  antecedência mediana 18.0 min  falsos 47 (1.68/dia; 5 em artefato)
+  Kalman com entradas, sem rejeição    detectou 11/11  antecedência mediana 18.0 min  falsos 48 (1.71/dia; 7 em artefato)
+Tempo do filtro: 2.59 s para 40320 passos (64 µs/passo)
+Episódio da figura: {'inicio': 7113, 'alerta_kalman': -58, 'alarme_sensor': -8}

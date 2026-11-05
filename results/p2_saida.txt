@@ -1,0 +1,32 @@
+Épocas por noite: 839 a 1177
+Proporção real das fases (W, L, P, R): ['6.8%', '47.6%', '20.0%', '25.6%']
+Transições reais por noite: 26.1
+Sem memória (só emissões)                acc 0.614 kappa 0.376 recall 0.75 0.81 0.46 0.32 | trans 364 | erro TTS 4.0 min, REM 12.6 pp, prof 4.6 pp | 0.2 ms/noite
+HMM supervisionado + forward-backward    acc 0.837 kappa 0.758 recall 0.93 0.79 0.91 0.85 | trans 32 | erro TTS 2.2 min, REM 3.2 pp, prof 4.2 pp | 17.1 ms/noite
+HMM supervisionado + Viterbi             acc 0.839 kappa 0.760 recall 0.92 0.80 0.90 0.84 | trans 27 | erro TTS 2.6 min, REM 4.0 pp, prof 3.4 pp | 4.0 ms/noite
+Palpite do especialista + Viterbi        acc 0.782 kappa 0.659 recall 0.89 0.86 0.91 0.49 | trans 17 | erro TTS 3.0 min, REM 9.9 pp, prof 2.3 pp | 3.9 ms/noite
+Baum-Welch (sem rótulos) + Viterbi       acc 0.670 kappa 0.521 recall 0.90 0.55 0.60 0.89 | trans 52 | erro TTS 3.6 min, REM 9.0 pp, prof 4.4 pp | 3.8 ms/noite
+Acurácia no teste ao longo do Baum-Welch: ['0.782', '0.756', '0.732', '0.712', '0.704', '0.697', '0.690', '0.683', '0.675', '0.672', '0.671', '0.671', '0.670']
+Baum-Welch: iterações 13 log-veross. inicial/final -63010 / -58053 tempo 5.2 s
+Duração média por fase segundo o modelo (min): ['5.5', '19.2', '25.5', '24.2']
+A (supervisionado):
+ [[0.909 0.09  0.001 0.001]
+ [0.007 0.974 0.008 0.011]
+ [0.    0.019 0.98  0.   ]
+ [0.011 0.009 0.    0.979]]
+A (Baum-Welch):
+ [[0.908 0.06  0.007 0.025]
+ [0.005 0.906 0.052 0.036]
+ [0.    0.077 0.915 0.007]
+ [0.01  0.032 0.003 0.954]]
+mu sup:
+ [[ 1.98 -0.71]
+ [-0.12  0.01]
+ [-0.68  0.68]
+ [ 0.22 -0.36]] 
+mu BW:
+ [[ 2.1  -0.72]
+ [-0.12  0.14]
+ [-0.98  0.37]
+ [ 0.42 -0.27]]
+q sup: [0.862 0.206 0.042 0.11 ]  q BW: [0.87  0.176 0.106 0.15 ]

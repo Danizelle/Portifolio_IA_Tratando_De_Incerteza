@@ -1,0 +1,43 @@
+Diferença máxima enumeração × eliminação: 2.8e-16
+
+Paciente A
+  Época epidêmica, 2º dia          dengu= 55.0%  chiku= 10.0%  zika=  5.0%  outra= 30.0%
+  + febre alta                     dengu= 64.9%  chiku= 12.5%  zika=  1.7%  outra= 20.8%
+  + dor retro-orbital              dengu= 88.8%  chiku=  5.7%  zika=  0.8%  outra=  4.7%
+  + sem dor articular intensa      dengu= 92.8%  chiku=  0.7%  zika=  0.9%  outra=  5.6%
+  + plaquetas baixas               dengu= 98.5%  chiku=  0.3%  zika=  0.1%  outra=  1.2%
+  + NS1 reagente                   dengu=100.0%  chiku=  0.0%  zika=  0.0%  outra=  0.0%
+
+Paciente B
+  Época epidêmica, 2º dia          dengu= 55.0%  chiku= 10.0%  zika=  5.0%  outra= 30.0%
+  + exantema                       dengu= 63.8%  chiku= 14.5%  zika= 13.0%  outra=  8.7%
+  + conjuntivite                   dengu= 23.4%  chiku= 16.0%  zika= 57.4%  outra=  3.2%
+  + sem febre alta                 dengu=  7.1%  chiku=  3.2%  zika= 86.5%  outra=  3.2%
+  + plaquetas normais              dengu=  5.6%  chiku=  3.1%  zika= 88.2%  outra=  3.2%
+  + NS1 não reagente               dengu=  0.9%  chiku=  3.2%  zika= 92.5%  outra=  3.4%
+
+Contexto (P(dengue)):
+  NS1+_so_epoca0                88.2%
+  febre_semNS1_epoca0           61.6%
+  NS1+_so_epoca1                98.1%
+  febre_semNS1_epoca1           88.8%
+  antes_NS1_dia0                88.8%
+  NS1neg_dia0                   54.7%
+  antes_NS1_dia1                88.8%
+  NS1neg_dia1                   81.6%
+  NS1neg_dia_desconhecido       71.4%
+
+População simulada ( 20000 pacientes; prevalência: [5784, 1215, 770, 12231] )
+  Só a época (taxa-base)             acurácia 0.695  log-perda 0.845  recall 0.66 0.00 0.00 0.83
+  Época + sintomas                   acurácia 0.796  log-perda 0.498  recall 0.64 0.56 0.48 0.91
+  Época + sintomas + plaquetas       acurácia 0.823  log-perda 0.446  recall 0.69 0.53 0.48 0.94
+  Época + sintomas + exames          acurácia 0.892  log-perda 0.302  recall 0.88 0.61 0.50 0.95
+  Sintomas + exames, sem a época     acurácia 0.879  log-perda 0.335  recall 0.86 0.52 0.49 0.95
+  matriz de confusão: [[5072, 123, 15, 574], [123, 746, 16, 330], [35, 43, 386, 306], [366, 186, 46, 11633]]
+
+Robustez (acurácia média, mínima) com CPTs perturbadas: {'0.25': (0.8904799999999999, 0.8818), '0.5': (0.8726800000000001, 0.8442), '1.0': (0.8163, 0.7402)}
+
+Tempos por consulta (s): {'enumeracao': '1.18 ms', 'eliminacao': '0.14 ms', 'ponderacao_10000': '2.83 ms', 'rejeicao_10000': '3.25 ms'}
+Amostragem: erro LW ['0.0642', '0.0317', '0.0204', '0.0107', '0.0066', '0.0036', '0.0021']
+            erro RJ ['0.7767', '0.6618', '0.2827', '0.1674', '0.0821', '0.0505', '0.0262']
+            aceitas ['0.0057', '0.0032', '0.0040', '0.0039', '0.0041', '0.0039', '0.0037']
